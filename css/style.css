@@ -4,14 +4,75 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+header {
+    width: 100%;
+    overflow: hidden;
+}
+
 body {
+    padding-top: 6.25rem;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
     background-image: url("/img/papier.jpg");
     background-size: cover; /* 'cover' voor volledige achtergrond, 'contain' voor volledige afbeelding */
     background-repeat: repeat; /* of 'repeat' als de afbeelding herhaalbaar is */
     background-position: center;
+}
+
+h1 {
+    color: #b08dad;
+    margin: 2rem;
+}
+
+h2 {
+    color: #8eb08d;
+    margin: 2rem;
+}
+
+p, a {
+    margin: 2.2rem;
+}
+
+/*navigator bar*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    left: 0;
+    background: #B94F98;
+    height: 6.25rem;
+    width: 100%;
+    z-index: 100;
+}
+
+nav img {
+    max-width: 9rem;
+    max-height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background: #b94f99;
+    transition: 0.4s;
+    transform: scale(1.05);
 }
 
 footer {
@@ -19,6 +80,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1.25rem;
+    position: relative;
+    z-index: 1;
 }
 
 footer p {

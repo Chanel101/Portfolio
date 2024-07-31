@@ -13,3 +13,19 @@ body {
     background-repeat: repeat; /* of 'repeat' als de afbeelding herhaalbaar is */
     background-position: center;
 }
+
+footer {
+    background-color: #B94F98;
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}

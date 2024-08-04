@@ -12,7 +12,6 @@
 
 <body>
     <header>
-        <!--Navigatie-->
         <nav>
             <a href="index.html"><img src="img/minilogo.png" alt="Logo"></a>
             <ul>
@@ -21,12 +20,37 @@
                 <li><a href="mijnwerk.html">Mijn projecten</a></li>
             </ul>
         </nav>
-
     </header>
 
-    <!--Main-->
     <main>
+        <section class="gallery">
+            <div class="gallery-item" onclick="openPopup('project1')">
+                <img src="img/project1.jpg" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="gallery-item" onclick="openPopup('project2')">
+                <img src="img/project2.jpg" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <!-- Voeg meer items toe zoals nodig -->
+        </section>
 
+        <!-- Pop-up venster -->
+        <div id="project1" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('project1')">&times;</span>
+                <h2>Project 1</h2>
+                <p>Details over Project 1...</p>
+            </div>
+        </div>
+
+        <div id="project2" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('project2')">&times;</span>
+                <h2>Project 2</h2>
+                <p>Details over Project 2...</p>
+            </div>
+        </div>
     </main>
 
     <!--Footer-->

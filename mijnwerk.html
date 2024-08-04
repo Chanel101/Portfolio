@@ -24,34 +24,22 @@
 
     <main>
         <section class="gallery">
-            <div class="gallery-item" onclick="openPopup('project1')">
-                <img src="img/project1.jpg" alt="Project 1">
-                <p>Project 1</p>
-            </div>
-            <div class="gallery-item" onclick="openPopup('project2')">
-                <img src="img/project2.jpg" alt="Project 2">
-                <p>Project 2</p>
-            </div>
-            <!-- Voeg meer items toe zoals nodig -->
+            <div class="gallery-item"><img src="img/project1.jpg" alt="Project 1"></div>
+            <div class="gallery-item"><img src="img/project2.jpg" alt="Project 2"></div>
+            <div class="gallery-item"><img src="img/project3.jpg" alt="Project 3"></div>
+            <!-- Meer afbeeldingen -->
         </section>
-
-        <!-- Pop-up venster -->
-        <div id="project1" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('project1')">&times;</span>
-                <h2>Project 1</h2>
-                <p>Details over Project 1...</p>
-            </div>
-        </div>
-
-        <div id="project2" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup('project2')">&times;</span>
-                <h2>Project 2</h2>
-                <p>Details over Project 2...</p>
-            </div>
-        </div>
     </main>
+
+    <!--Modal-->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-image" src="" alt="">
+            <h2 class="modal-title"></h2>
+            <p class="modal-description"></p>
+        </div>
+    </div>
 
     <!--Footer-->
     <footer>

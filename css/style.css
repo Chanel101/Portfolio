@@ -144,6 +144,11 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
 footer {
     background-color: #B94F98;
     color: #fff;

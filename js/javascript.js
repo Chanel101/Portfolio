@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Definieer de constante voor de lijst met afbeeldingen
 const imageList = [
-    { src: 'img/project1.jpg', title: 'Project 1', description: 'Beschrijving van project 1' },
+    { src: 'img/satisfyers.png', title: 'Project 1', description: 'Beschrijving van project 1' },
     { src: 'img/project2.jpg', title: 'Project 2', description: 'Beschrijving van project 2' },
     { src: 'img/project3.jpg', title: 'Project 3', description: 'Beschrijving van project 3' }
     // Voeg hier meer afbeeldingen toe

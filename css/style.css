@@ -10,7 +10,7 @@ body {
     color: #fff;
 }
 
-/*navigatie*/
+/* Navigatie */
 header {
     position: fixed;
     width: 100%;
@@ -59,14 +59,15 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/*home pagina header*/
+/* Home pagina header */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url("/img/papier.jpg"); /* Controleer dit pad */
+    background-image: url("/img/papier.jpg");
+    /* Controleer dit pad */
     background-size: cover;
     background-position: center;
 }
@@ -103,8 +104,42 @@ nav ul li a:hover {
     font-size: 1.2em;
 }
 
+/* Galerij en afbeeldingen */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.gallery-item {
+    margin: 10px;
+    flex-basis: calc(33.33% - 20px);
+    /* Hierdoor worden er 3 items per rij getoond */
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 99%;
+    height: 400px;
+    /* Standaard hoogte om de afbeeldingen uniform te maken */
+    object-fit: cover;
+    /* Zorgt ervoor dat de afbeelding de container vult zonder vervorming */
+    border-radius: 15px;
+    /* Optioneel: maakt de hoeken van de afbeeldingen afgerond */
+    transition: transform 0.3s ease;
+    /* Voor een subtiele hover-animatie */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    /* Zoom in bij hover */
+}
+
+/* Modal venster */
 .modal {
-    display: none; /* Verborgen standaard */
+    display: none;
+    /* Verborgen standaard */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -116,18 +151,38 @@ nav ul li a:hover {
 }
 
 .modal-content {
-    margin: 15% auto;
+    display: flex;
+    align-items: center;
+    margin: 10% auto;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     width: 80%;
-    max-width: 700px;
+    max-width: 900px;
     position: relative;
 }
 
 .modal-image {
-    width: 100%;
+    width: 50%;
     height: auto;
+    border-radius: 10px;
+}
+
+.modal-text {
+    width: 50%;
+    padding-left: 20px;
+    color: #000;
+}
+
+.modal-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.modal-description {
+    font-size: 1em;
+    color: #000;
 }
 
 .close {
@@ -138,17 +193,13 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.gallery-item {
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-}
-
+/* Secties */
 section {
     padding: 100px 20px;
     text-align: center;
 }
 
+/* Footer */
 footer {
     background-color: #B94F98;
     color: #fff;

@@ -17,28 +17,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Variabele om de huidige index van de afbeelding bij te houden
     let currentImageIndex = 0;
 
-    // Functie om een afbeelding in de modal te openen
     function openModal(index) {
         currentImageIndex = index;
         const imageInfo = imageList[currentImageIndex];
 
-        // Maak de modal dynamisch aan
+        // Creëer de modal-inhoud dynamisch
+        const modalHtml = `
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="modal-image" src="${imageInfo.src}" alt="${imageInfo.title}">
+                <div class="modal-text">
+                    <h2 class="modal-title">${imageInfo.title}</h2>
+                    <p class="modal-description">${imageInfo.description}</p>
+                </div>
+            </div>
+        `;
+
+        // Creëer het modal-element
         const modalElement = document.createElement('div');
         modalElement.id = 'imageModal';
         modalElement.className = 'modal';
+        modalElement.innerHTML = modalHtml;
 
         document.body.appendChild(modalElement);
 
         // Toon de modal
         modalElement.style.display = 'block';
 
-        // Sluit de modal bij klikken op de sluitknop
+        // Event listener voor de sluitknop
         const closeButton = modalElement.querySelector('.close');
         closeButton.addEventListener('click', () => {
             closeModal(modalElement);
         });
 
-        // Sluit de modal bij klikken buiten de inhoud
+        // Event listener voor klikken buiten de modal-inhoud om de modal te sluiten
         modalElement.addEventListener('click', (event) => {
             if (event.target === modalElement) {
                 closeModal(modalElement);
@@ -46,12 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Functie om de modal te sluiten
     function closeModal(modalElement) {
         document.body.removeChild(modalElement);
     }
 
-    // Voeg click-events toe aan afbeeldingen in de galerij
+    // Voeg click-events toe aan de galerij-afbeeldingen
     const galleryItems = document.querySelectorAll('.gallery-item img');
     galleryItems.forEach((item, index) => {
         item.addEventListener('click', () => openModal(index));
